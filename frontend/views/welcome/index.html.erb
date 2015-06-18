@@ -1,0 +1,16 @@
+<%= setup_context :title => "Home", :suppress_breadcrumb => true %>
+
+<div class="row">
+  <div class="col-md-12">
+    <%= render_aspace_partial :partial => "shared/flash_messages" %>
+  </div>
+
+   <div class="col-md-12" style="padding: 30px;">
+      <h1><%= I18n.t "welcome.heading" %></h1>
+      <% if session["user"] %>
+        <p><%= I18n.t "welcome.message_logged_in" %></p>
+      <% else %>
+        <p>To request an account please contact <a href="mailto:lit-cs-sysadmin@umich.edu">lit-cs-sysadmin@umich.edu</a>.</p>
+      <% end %>
+   </div>
+</div>
